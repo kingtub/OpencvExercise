@@ -5,14 +5,15 @@ def bgr2gray():
     img = cv2.imread(img_dir + 'shuqi.jpg')
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     cv2.imshow('gray', gray)
-    cv2.imwrite(img_dir + 'shuqi_gray.bmp', gray)
+    cv2.imwrite(img_dir + 'shuqi_gray.jpg', gray)
+    print(img.shape)
     print(gray.shape)
     cv2.waitKey()
     cv2.destroyAllWindows()
 
 
 def gray2bgr():
-    img = cv2.imread(img_dir + 'shuqi_gray.bmp', cv2.IMREAD_UNCHANGED)
+    img = cv2.imread(img_dir + 'shuqi_gray.jpg', cv2.IMREAD_UNCHANGED)
     bgr = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
     cv2.imshow('bgr', bgr)
     b, g, r = cv2.split(bgr)
@@ -32,6 +33,6 @@ def bgr2rgb():
     cv2.destroyAllWindows()
 
 
-# bgr2gray()
+bgr2gray()
 # gray2bgr()
-bgr2rgb()
+#bgr2rgb()
