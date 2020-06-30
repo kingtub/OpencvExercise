@@ -3,7 +3,7 @@
 '''
 import cv2
 
-o = cv2.imread('C:\\D\\testImgs\\' + 'shuqi.jpg')
+o = cv2.imread('C:\\D\\testImgs\\chapter12\\image\\girl.bmp', cv2.IMREAD_UNCHANGED)
 od = cv2.pyrDown(o)
 odu = cv2.pyrUp(od)
 
